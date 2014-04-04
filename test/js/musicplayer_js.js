@@ -1,6 +1,6 @@
-onload=function(){
+﻿onload=function(){
 	titles();
-	if (navigator.appName!="Microsoft Internet Explorer"){							//浏览器判断
+	if (navigator.appName!="Microsoft Internet Explorer" || navigator.appName!="Netscape"){							//浏览器判断
 		document.getElementById("play").innerHTML="";
 		document.getElementById('title').innerHTML="您的浏览器不支持此播放模块！"
 	}
