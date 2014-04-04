@@ -1,0 +1,52 @@
+*{
+	margin: 0; 
+	padding: 0; 
+	list-style: 
+	none; 
+}
+body{
+	background-color: #f1f1f1;
+}
+#longimage{
+	margin: 0 auto 0 auto;
+	width: 600px;
+	height: 480px;
+	padding: 10px;
+	background-color: #f9f9f9;
+	border:1px solid #C7E5EB;
+}
+#inner{
+	width: 600px;
+	height: 480px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+#up{
+	width: 600px;
+	height: 240px;
+	position: absolute;
+	background: url("1pxblank.png") repeat;
+	z-index: 1;
+}
+#down{
+	width: 600px;
+	height: 240px;
+	position: absolute;
+	background: url("images/1pxblank.png") repeat;
+	top:240px;
+	z-index: 1;
+}
+
+#img01{
+	width: 66px;
+	height: 48px;
+	position: absolute;
+	z-index: 2;
+}
+
+#img02{
+	position: absolute;
+	z-index: 0;
+	top: 0;
+}

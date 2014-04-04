@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>音乐播放器</title>
+	<link rel="stylesheet" type="text/css" href="css/musicplayer_style.css">
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/musicplayer_js.js"></script>
+</head>
+<body>
+	<div id="musicplayer">
+		<div id="control">
+			<p id="title" onclick="haha()">加载中...</p>
+			<div id="process">
+				<div id="process_inner"></div>
+			</div>
+			<div id="playtime">
+				<div id="time1" class="playtime" title="当前时间"></div>
+				<div id="time2" class="playtime" title="总时间"></div>
+			</div>
+			<div id="music_button">
+				<div id="music_prev" title="上一曲">
+					<div id="music_prev1"></div>
+					<div id="music_prev2"></div>
+				</div>
+				<div id="music_playpause">
+					<div id="music_play">
+						<div id="music_play1"></div>
+						<div id="music_play2"></div>
+					</div>
+					<div id="music_pause">
+						<div id="music_pause1"></div>
+						<div id="music_pause2"></div>
+					</div>
+				</div>
+				<div id="music_next" title="下一曲">
+					<div id="music_next1"></div>
+					<div id="music_next2"></div>
+				</div>
+			</div>
+		</div>
+		<div id="volume">
+			<div id="volup" title="音量+" onclick="volup()">
+				<div id="volup1"></div>
+				<div id="volup2"></div>
+			</div>
+			<div id="vol">
+				<div id="vol_inner"></div>
+			</div>
+			<div id="voldown" title="音量-" onclick="voldown()">
+				<div id="voldown1"></div>
+				<div id="voldown2"></div>
+			</div>
+		</div>
+		<div id="play">
+		<embed id="Player" src="media/bgsound/0.mp3" autostart="flase" loop="flase" hidden="true"/>
+		</div>
+	</div>
+</body>
+</html>

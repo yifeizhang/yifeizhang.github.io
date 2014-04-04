@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>一个未建成的个人网站</title>
+	<script type="text/javascript">
+		function getStyle(obj,attr)													//获取CSS样式函数
+		{
+   			if(obj.currentStyle)
+     		{
+				return obj.currentStyle[attr];
+      		}else
+      		{
+				return document.defaultView.getComputedStyle(obj,null)[attr];
+       		}
+		}
+		onload=function(){															//垂直居中div
+		var div = document.getElementById("main");
+		var height = parseInt(getStyle(div,"height"));
+		var padding = parseInt(getStyle(div,"padding"));
+		var h = (innerHeight-height-padding*2)/2;
+		div.style.marginTop=h+"px";
+		t=setTimeout("onload()", 0)
+		} 
+	</script>
+	<style type="text/css">
+	*{ margin: 0; padding: 0; list-style: none; }
+	body{ background-color: #f1f1f1; }
+	a {color: #999999;}
+	a:link {text-decoration: none;}
+	a:visited {text-decoration: none;color: #999999;}
+	a:hover {text-decoration: none;color: #E74B3B;}
+	a:active {text-decoration: none;}
+	#main{ margin: 0 auto 0 auto; font-family: "黑体" ; height: 150px; font-size: 40px; line-height: 50px; text-align: center;}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<p><a href="turnbox.html" target="_blank">翻格子</a></p>
+		<p><a href="longimg.html" target="_blank">仿空间长图</p></a>
+		<p><a href="musicplayer.html" target="_blank">音乐播放器</p></a>
+	</div>
+</body>
+</html>

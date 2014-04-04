@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>仿空间长图效果</title>
+	<link rel="stylesheet" type="text/css" href="css/longimg_style.css">
+	<script type="text/javascript">
+		function getStyle(obj,attr)//获取CSS样式函数
+		{
+   			if(obj.currentStyle)
+     		{
+				return obj.currentStyle[attr];
+      		}else
+      		{
+				return document.defaultView.getComputedStyle(obj,null)[attr];
+       		}
+		}
+		onload=function(){//垂直居中div
+			var div = document.getElementById("longimage");
+			var height = parseInt(getStyle(div,"height"));
+			var padding = parseInt(getStyle(div,"padding"));
+			var h = (innerHeight-height-padding*2)/2;
+			div.style.marginTop=h+"px";
+			t=setTimeout("onload()", 0)
+		} 
+
+		var run;
+		var t;
+		function heihei(){
+			if(run){
+				var top=parseInt(getStyle(document.getElementById("img02"),"top"));
+				var dh=parseInt(getStyle(document.getElementById("inner"),"height"));
+				var h=document.getElementById("img02").height;
+				var i=top-1;
+				if(top<=dh-h){
+					return;
+				}
+				document.getElementById("img02").style.top=i+"px";
+				setTimeout("heihei()",5)
+			}
+		}
+		function haha(){
+			run=true;
+			heihei();
+		}
+			
+		function lala(){
+			run=false;
+		}
+		function hehe(){
+			lala();
+		}
+
+		var run1=true;
+		function heiheihei(){
+			if(run1){
+				var top=parseInt(getStyle(document.getElementById("img02"),"top"));
+				var i=top+1;
+				if(top>=0){
+					return;
+				}
+				document.getElementById("img02").style.top=i+"px";
+				setTimeout("heiheihei()",5)
+			}
+		}
+		function hahaha(){
+			run1=true;
+			heiheihei();
+		}
+		function lalala(){
+			run1=false;
+		}
+		function hehehe(){
+			lalala();
+		}
+
+		var run2=true;
+		function hei(){
+			if(run2){
+				var top=parseInt(getStyle(document.getElementById("img02"),"top"));
+				var i=top+1;
+				if(top>=0){
+					return;
+				}
+				document.getElementById("img02").style.top=i+"px";
+				setTimeout("hei()",5)
+			}
+		}
+		function ha(){
+			run2=true;
+			hei();
+		}
+		function la(){
+			run2=false;
+		}
+		function he(){
+			la();
+		}
+	</script>
+</head>
+<body >
+	<div id="longimage">
+		<div id="inner">
+			<img id="img01" src="images/icon.png" title="长图" onmouseover="ha()" onmouseout="he()"/>	
+			<div id="up" onmouseover="hahaha()" onmouseout="hehehe()"></div>
+			<div id="down" onmouseover="haha()" onmouseout="hehe()"></div>
+			<img id="img02" src="images/longimage.jpg" width="600px" height="3360px"/>
+		</div>
+	</div>
+</body>
+</html>
